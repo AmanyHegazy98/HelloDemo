@@ -6,8 +6,13 @@ jobs:
   HelloWorld:
     docker:
       - image: circleci/node:13.8.0
+    environment:
+     envTest : <<pipeline.id>>
+     envTest2: "ABC" 
     steps:
       - run: echo Hello World
+      - run: echo $envTest
+      - run: echo $envTest2
   printMyName:
     docker:
       - image: circleci/node:13.8.0
