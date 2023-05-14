@@ -19,6 +19,5 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - HelloWorld
-      - printMyName:
-          requires:
-            - HelloWorld
+      - printMyName
+        
